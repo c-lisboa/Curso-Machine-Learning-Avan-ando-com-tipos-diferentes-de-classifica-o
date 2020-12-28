@@ -1,0 +1,113 @@
+*********************************************************************
+************ BIBLIOTECA LINGUAGEM NATURAL TOOLKIT (NLTK) ************
+*********************************************************************
+
+
+****************
+*** INSTALAR ***
+****************
+
+pip install nltk
+
+OU
+
+pip3 install nltk
+
+
+
+**********************
+*** BAIXAR PACOTES ***
+**********************
+
+>>> import nltk
+>>> nltk.download()
+
+# Abre uma janela para escolher qual pacote baixar.
+
+
+
+*** Baixando o stopwords corpus
+
+# Para baixar o pacote de stopwords basta digitar direto (após o import nltk)
+
+>>> import nltk
+>>> nltk.download('stopwords')
+
+# Só é necessário baixá-lo uma única vez, então após a primeira execução, você pode comentar essa linha.
+
+
+***************
+*** COMANDO ***
+***************
+
+# Pega todas as stop words da língua portuguesa:
+
+>>> nltk.corpus.stopwords.words("portuguese")
+
+
+
+****************************
+*** Baixando RSLPStemmer ***
+****************************
+
+'''
+Da mesma forma como fizemos com o stopwords corpus, utilizaremos a função download do nltk, porém, dessa vez, ao invés de abrir o assistente, pediremos pelo nome identificador do módulo por parâmetro, nesse caso, o parâmetro será 'rslp':
+'''
+
+>>> import nltk
+>>> nltk.download('rslp')
+
+# Obs.: rslp -> removedor de sufixo da língua portuguesa.
+
+
+
+***************************
+*** Baixando o tokenize ***
+***************************
+
+# Biblioteca do tokenize punkt, que lida justamente com as pontuações:
+
+>>> import nltk
+>>> nltk.download("punkt")
+
+
+
+***********
+*** USO ***
+***********
+
+> python
+>>> import nltk
+>>>
+
+
+
+# Todas as palavras de paradas, ou seja, as stop words:
+
+>>> nltk.corpus.stopwords
+
+
+
+Das palavras da língua portuguesa:
+
+>>> nltk.corpus.stopwords.words("portugues")
+
+
+
+***************************
+*** Testando os módulos ***
+***************************
+
+# Para testar cada uma dos módulos podemos realizar os seguintes oomandos:
+
+>>> stopwords corpus: nltk.corpus.stopwords.words("portuguese")
+
+
+>>> RSLPStemmer: stemmer = nltk.stem.RSLPStemmer()
+                 stemmer.stem("amigos")
+
+
+>>> tokenize: nltk.tokenize.word_tokenize("Voce vai viajar? Este ano, eu penso que sim! Claro!?Mas e voce? Sim!")
+
+
+
